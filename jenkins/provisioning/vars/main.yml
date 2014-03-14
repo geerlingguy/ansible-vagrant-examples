@@ -1,0 +1,15 @@
+---
+workspace: /root
+hostname: jenkins
+ntp_timezone: America/Chicago
+
+firewall_allowed_tcp_ports:
+  - "22"
+  - "25"
+  - "80"
+  - "443"
+  - "8080"
+
+jenkins_plugins:
+  - git
+  - ssh

@@ -7,10 +7,10 @@ Soon, I'll add a bunch of example playbooks that run within Vagrant and use Ansi
   - LAMP
   - Apache Solr
   - GitLab
+  - Jenkins
 
 # To be added
 
-  - Jenkins
   - SonarQube
   - Phergie
   - ...
