@@ -1,0 +1,19 @@
+---
+workspace: /root
+hostname: gitlab
+timezone: America/Chicago
+
+git_install_from_source: true
+git_version: "1.8.3"
+
+gitlab_url: https://gitlab/
+gitlab_database_name: gitlabhq_production
+gitlab_database_password: secret
+
+mysql_root_password: root
+mysql_enablerepo: epel
+mysql_packages:
+  - mysql
+  - mysql-server
+  - mysql-devel
+  - MySQL-python

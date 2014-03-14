@@ -1,0 +1,29 @@
+---
+# Ansible playbook for a GitLab server.
+#
+# If this is being used within a Vagrant profile, you can update your server
+# by running `vagrant provision` again.
+#
+# @todo - Install postfix `yum -y install postfix`.
+#
+# @author Jeff Geerling (2014).
+#
+# @see http://www.ansibleworks.com/docs/bestpractices.html
+
+- hosts: gitlab
+  gather_facts: yes
+
+  vars_files:
+    - vars/main.yml
+
+  roles:
+    - geerlingguy.firewall
+    - geerlingguy.nfs
+    - geerlingguy.ntp
+    - geerlingguy.repo-epel
+    - geerlingguy.git
+    - geerlingguy.redis
+    - geerlingguy.mysql
+    - geerlingguy.ruby
+    - geerlingguy.nginx
+    - geerlingguy.gitlab
