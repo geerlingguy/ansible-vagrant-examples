@@ -16,7 +16,7 @@ To use the vagrant file, you will need to have done the following:
   2. Download and Install [Vagrant](http://downloads.vagrantup.com/)
   3. Install [Ansible](http://ansibleworks.com/) ([guide for installing Ansible](http://docs.ansible.com/intro_installation.html)).
   4. Open a shell prompt (Terminal app on a Mac) and cd into the folder containing the `Vagrantfile`.
-  5. This Ansible playbook uses a variety of roles to configure the Apache Solr server, and you'll need to install the roles before you can get the VM set up. Run the following command to get all the necessary roles: `$ ansible-galaxy install `
+  5. This Ansible playbook uses a variety of roles to configure the Apache Solr server, and you'll need to install the roles before you can get the VM set up. Run the following command to get all the necessary roles: `$ ansible-galaxy install geerlingguy.firewall geerlingguy.ntp geerlingguy.java geerlingguy.tomcat6 geerlingguy.solr`
 
 Once all of that is done, you can simply type in `vagrant up`, and Vagrant will create a new VM, install the centos64 base box, and configure it as a GitLab server.
 

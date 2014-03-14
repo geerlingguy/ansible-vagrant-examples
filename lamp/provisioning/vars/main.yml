@@ -1,7 +1,7 @@
 ---
 workspace: /root
 hostname: lamp
-timezone: America/Chicago
+ntp_timezone: America/Chicago
 
 apache_enablerepo: remi
 apache_vhosts:

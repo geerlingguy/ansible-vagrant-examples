@@ -1,7 +1,7 @@
 ---
 workspace: /root
 hostname: gitlab
-timezone: America/Chicago
+ntp_timezone: America/Chicago
 
 git_install_from_source: true
 git_version: "1.8.3"
