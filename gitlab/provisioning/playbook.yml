@@ -18,7 +18,6 @@
 
   roles:
     - geerlingguy.firewall
-    - geerlingguy.nfs
     - geerlingguy.ntp
     - geerlingguy.repo-epel
     - geerlingguy.git

@@ -23,12 +23,7 @@ To use the vagrant file, you will need to have done the following:
 
 Once all of that is done, you can simply type in `vagrant up`, and Vagrant will create a new VM, install the centos64 base box, and configure it as a GitLab server.
 
-Once the new VM is up and running (after `vagrant up` is complete and you're back at the command prompt), you can log into it via SSH if you'd like by typing in `vagrant ssh`. Otherwise, the next steps are below:
-
-GitLab's default administrator account details are below; be sure to login immediately and change these credentials!
-
-    admin@local.host
-    5iveL!fe
+Once the new VM is up and running (after `vagrant up` is complete and you're back at the command prompt), you can log into it via SSH if you'd like by typing in `vagrant ssh`. Otherwise, the next steps are below.
 
 ### Setting up your hosts file
 
@@ -39,5 +34,10 @@ You need to modify your host machine's hosts file (Mac/Linux: `/etc/hosts`; Wind
 (Where `gitlab`) is the hostname you have configured in the `Vagrantfile`).
 
 After that is configured, you could visit http://gitlab/ in a browser, and you'll see the GitLab home page. Nice!
+
+GitLab's default administrator account details are below; be sure to login immediately and change these credentials!
+
+    admin@local.host
+    5iveL!fe
 
 If you'd like additional assistance editing your hosts file, please read [How do I modify my hosts file?](http://www.rackspace.com/knowledge_center/article/how-do-i-modify-my-hosts-file) from Rackspace.
