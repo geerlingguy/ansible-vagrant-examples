@@ -4,12 +4,12 @@ Soon, I'll add a bunch of example playbooks that run within Vagrant and use Ansi
 
 # Currently Present
 
+  - LAMP
+  - Apache Solr
   - GitLab
 
 # To be added
 
-  - LAMP
-  - Solr
   - Jenkins
   - SonarQube
   - Phergie

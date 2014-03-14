@@ -1,0 +1,12 @@
+---
+workspace: /root
+hostname: solr
+timezone: America/Chicago
+
+firewall_allowed_tcp_ports:
+  - "22"
+  - "25"
+  - "8080"
+
+tomcat6_hostname: localhost
+tomcat6_catalina_port: 8080
