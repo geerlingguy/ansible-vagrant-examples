@@ -1,0 +1,24 @@
+---
+# Ansible playbook for a Phergie PHP IRC bot server.
+#
+# If this is being used within a Vagrant profile, you can update your server
+# by running `vagrant provision` again.
+#
+# @author Jeff Geerling (2014).
+#
+# @see http://www.ansibleworks.com/docs/bestpractices.html
+
+- hosts: phergie
+  gather_facts: yes
+
+  vars_files:
+    - vars/main.yml
+
+  roles:
+    - geerlingguy.firewall
+    - geerlingguy.ntp
+    - geerlingguy.repo-epel
+    - geerlingguy.repo-remi
+    - geerlingguy.git
+    - geerlingguy.php
+    - geerlingguy.phergie

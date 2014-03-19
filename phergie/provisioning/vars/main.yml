@@ -1,0 +1,39 @@
+---
+workspace: /root
+hostname: phergie
+ntp_timezone: America/Chicago
+
+firewall_allowed_tcp_ports:
+  - "22"
+  - "6667"
+
+php_memory_limit: '128M'
+php_enablerepo: remi
+php_packages:
+  - ImageMagick
+  - php
+  - php-cli
+  - php-common
+  - php-devel
+  - php-mbstring
+  - php-pdo
+  - php-sqlite
+  - php-xml
+  - php-xmlrpc
+
+phergie_install_path: /home/vagrant/phergie
+phergie_user: vagrant
+phergie_timezone: America/Chicago
+phergie_connections:
+  - {
+    host: 'irc.freenode.net',
+    port: '6667',
+    username: 'PhergieExample',
+    realname: 'Phergie Example Bot',
+    nick: 'PhergieExample'
+  }
+phergie_autojoin_channels:
+  - '#example'
+phergie_altnicks: []
+phergie_ui_enabled: 'true'
+phergie_command_prefix: '!'

@@ -10,14 +10,14 @@ Read more about Ansible and how I use it to manage infrastructure in [Ansible fo
 
 # VMs/Apps Currently Present
 
-  - LAMP
-  - Apache Solr
-  - GitLab
-  - Jenkins
+  - **LAMP** (Linux, Apache, MySQL, and PHP)
+  - **Apache Solr** (Java-based text search service)
+  - **GitLab** (Ruby-based GitHub-like Git web interface)
+  - **Jenkins** (Java-based Continuous Integration server)
+  - **Phergie** (PHP IRC Bot)
 
 # To be added
 
   - SonarQube
-  - Phergie
-  - Node.js App
+  - Node.js App Server
   - ...
