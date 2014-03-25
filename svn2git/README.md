@@ -6,7 +6,7 @@ Vagrant and VirtualBox (or some other VM provider) can be used to quickly build 
 
 This Vagrant profile installs [Svn2Git](https://lucene.apache.org/solr/) using the [Ansible](http://www.ansible.com/) provisioner.
 
-With Svn2Git installed, you can convert an SVN repository to a Git repository using the command `svn-all-fast-export`. Read more here: [LINK](http://www.midwesternmac.com/).
+With Svn2Git installed, you can convert an SVN repository to a Git repository using the command `svn-all-fast-export`. Read more here: [Switching an SVN repository to Git with KDE's Svn2Git](http://www.midwesternmac.com/blogs/jeff-geerling/switching-svn-repository-git2svn).
 
 ## Getting Started
 
