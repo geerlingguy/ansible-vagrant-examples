@@ -16,6 +16,7 @@ Read more about Ansible and how I use it to manage infrastructure in [Ansible fo
   - **Jenkins** (Java-based Continuous Integration server)
   - **Phergie** (PHP IRC Bot)
   - **SVN** (An SVN server using Apache for a web interface)
+  - **Svn2Git** (A VM which includes KDE's Svn2Git for repository conversions)
 
 # To be added
 

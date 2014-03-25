@@ -1,0 +1,5 @@
+---
+workspace: /root
+hostname: svn2git
+
+git_install_from_source: false
