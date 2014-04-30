@@ -1,0 +1,12 @@
+---
+ntp_timezone: America/Chicago
+
+firewall_allowed_tcp_ports:
+  - "22"
+  - "3000"
+
+git_install_from_source: false
+
+mysql_root_password: root
+
+gogs_use_mysql: true

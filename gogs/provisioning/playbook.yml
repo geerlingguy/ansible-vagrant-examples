@@ -1,0 +1,27 @@
+---
+# Ansible playbook for a Gogs server.
+#
+# If this is being used within a Vagrant profile, you can update your server
+# by running `vagrant provision` again.
+#
+# @author Jeff Geerling (2014).
+#
+# @see http://www.ansibleworks.com/docs/bestpractices.html
+
+- hosts: gogs
+  gather_facts: yes
+
+  vars_files:
+    - vars/main.yml
+
+  pre_tasks:
+    - name: Update apt cache if needed.
+      apt: update_cache=yes cache_valid_time=3600
+      sudo: yes
+
+  roles:
+    - geerlingguy.firewall
+    - geerlingguy.ntp
+    - geerlingguy.git
+    - geerlingguy.mysql
+    - geerlingguy.gogs

@@ -13,6 +13,7 @@ Read more about Ansible and how I use it to manage infrastructure in [Ansible fo
   - **LAMP** (Linux, Apache, MySQL, and PHP)
   - **Apache Solr** (Java-based text search service)
   - **GitLab** (Ruby-based GitHub-like Git web interface)
+  - **Gogs** (Go-based GitHub-like Git web interface)
   - **Jenkins** (Java-based Continuous Integration server)
   - **Phergie** (PHP IRC Bot)
   - **SVN** (An SVN server using Apache for a web interface)
