@@ -4,3 +4,6 @@ ntp_timezone: America/Chicago
 firewall_allowed_tcp_ports:
   - "22"
   - "80"
+
+apache_vhosts:
+  - {servername: "munin", documentroot: "/var/cache/munin/www"}

@@ -20,12 +20,16 @@ To use the vagrant file, you will need to have done the following:
 
 Once all of that is done, you can simply type in `vagrant up`, and Vagrant will create a new VM, install the base box, and configure it.
 
-Once the new VM is up and running (after `vagrant up` is complete and you're back at the command prompt), you can log into it via SSH if you'd like by typing in `vagrant ssh`.
+Once the new VM is up and running (after `vagrant up` is complete and you're back at the command prompt), you can log into it via SSH if you'd like by typing in `vagrant ssh`. Otherwise, the next steps are below.
 
-Once logged in, you can run phergie using the command:
+### Setting up your hosts file
 
-    $ php ~/phergie/phergie.php
+You need to modify your host machine's hosts file (Mac/Linux: `/etc/hosts`; Windows: `%systemroot%\system32\drivers\etc\hosts`), adding the line below:
 
-To run phergie in the background while logging output, use the command:
+    192.168.33.90  munin
 
-    $ nohup php ~/phergie/phergie.php > ~/phergie/log 2>&1&
+(Where `munin`) is the hostname you have configured in the `Vagrantfile`).
+
+After that is configured, you could visit http://munin/ in a browser, and you'll see the Munin index page. Nice! (If you are prompted for a username and password, it's `munin` and `munin` by default).
+
+If you'd like additional assistance editing your hosts file, please read [How do I modify my hosts file?](http://www.rackspace.com/knowledge_center/article/how-do-i-modify-my-hosts-file) from Rackspace.
