@@ -15,6 +15,7 @@ Read more about Ansible and how I use it to manage infrastructure in [Ansible fo
   - **GitLab** (Ruby-based GitHub-like Git web interface)
   - **Gogs** (Go-based GitHub-like Git web interface)
   - **Jenkins** (Java-based Continuous Integration server)
+  - **Munin** (Munin and munin-node monitoring server)
   - **Phergie** (PHP IRC Bot)
   - **SVN** (An SVN server using Apache for a web interface)
   - **Svn2Git** (A VM which includes KDE's Svn2Git for repository conversions)

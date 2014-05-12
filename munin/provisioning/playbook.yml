@@ -14,10 +14,13 @@
   vars_files:
     - vars/main.yml
 
+  pre_tasks:
+    - name: Update apt cache if needed.
+      apt: update_cache=yes cache_valid_time=3600
+
   roles:
     - geerlingguy.firewall
     - geerlingguy.ntp
-    - geerlingguy.repo-epel
     - geerlingguy.apache
     - geerlingguy.munin
     - geerlingguy.munin-node

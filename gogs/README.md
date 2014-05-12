@@ -18,7 +18,7 @@ To use the vagrant file, you will need to have done the following:
   4. Open a shell prompt (Terminal app on a Mac) and cd into the folder containing the `Vagrantfile`.
   5. This Ansible playbook uses a variety of roles to configure the Gogs server, and you'll need to install the roles before you can get the VM set up. Run the following command to get all the necessary roles: `$ ansible-galaxy install geerlingguy.firewall geerlingguy.ntp geerlingguy.git geerlingguy.mysql geerlingguy.gogs`
 
-Once all of that is done, you can simply type in `vagrant up`, and Vagrant will create a new VM, install the ubuntu1204 base box, and configure it.
+Once all of that is done, you can simply type in `vagrant up`, and Vagrant will create a new VM, install the base box, and configure it.
 
 Once the new VM is up and running (after `vagrant up` is complete and you're back at the command prompt), you can log into it via SSH if you'd like by typing in `vagrant ssh`. Otherwise, the next steps are below.
 
