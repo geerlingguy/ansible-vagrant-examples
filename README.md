@@ -11,6 +11,7 @@ Read more about Ansible and how I use it to manage infrastructure in [Ansible fo
 # VMs/Apps Currently Present
 
   - **LAMP** (Linux, Apache, MySQL, and PHP)
+  - **LEMP** (Linux Nginx, MySQL, and PHP-fpm)
   - **Apache Solr** (Java-based text search service)
   - **GitLab** (Ruby-based GitHub-like Git web interface)
   - **Gogs** (Go-based GitHub-like Git web interface)

@@ -1,0 +1,22 @@
+---
+php_enable_php_fpm: true
+php_enablerepo: remi
+php_packages:
+  - ImageMagick
+  - php
+  - php-cli
+  - php-common
+  - php-devel
+  - php-gd
+  - php-imap
+  - php-ldap
+  - php-mbstring
+  - php-pdo
+  - php-pear
+  - php-pecl-apc
+  - php-xml
+  - php-xmlrpc
+  - php-fpm
+
+mysql_root_password: root
+mysql_enablerepo: remi
