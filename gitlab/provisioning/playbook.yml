@@ -18,11 +18,4 @@
 
   roles:
     - geerlingguy.firewall
-    - geerlingguy.ntp
-    - geerlingguy.repo-epel
-    - geerlingguy.git
-    - geerlingguy.redis
-    - geerlingguy.mysql
-    - geerlingguy.ruby
-    - geerlingguy.nginx
     - geerlingguy.gitlab
