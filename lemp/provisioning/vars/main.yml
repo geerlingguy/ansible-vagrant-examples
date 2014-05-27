@@ -1,4 +1,5 @@
 ---
+php_webserver_daemon: nginx
 php_enable_php_fpm: true
 php_enablerepo: remi
 php_packages:
