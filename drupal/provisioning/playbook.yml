@@ -1,0 +1,35 @@
+---
+# Ansible playbook for a Drupal LAMP server.
+#
+# If this is being used within a Vagrant profile, you can update your server
+# by running `vagrant provision` again.
+#
+# @author Jeff Geerling (2014).
+#
+# @see http://www.ansibleworks.com/docs/bestpractices.html
+
+- hosts: drupal
+  gather_facts: yes
+
+  vars_files:
+    - vars/main.yml
+
+  pre_tasks:
+    - name: Update apt cache if needed.
+      apt: update_cache=yes cache_valid_time=3600
+
+    - name: Add ondrej repository for later versions of PHP.
+      # Note: Remove '-oldstable' for PHP 5.5.x.
+      apt_repository: repo='ppa:ondrej/php5-oldstable'
+
+  roles:
+    - geerlingguy.firewall
+    - geerlingguy.ntp
+    - geerlingguy.postfix
+    - geerlingguy.mysql
+    - geerlingguy.apache
+    - geerlingguy.php
+    - geerlingguy.php-mysql
+    - geerlingguy.composer
+    - geerlingguy.drush
+    - geerlingguy.drupal
