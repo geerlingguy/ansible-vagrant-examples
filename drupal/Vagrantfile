@@ -4,7 +4,7 @@
 Vagrant.configure("2") do |config|
   # All Vagrant configuration is done here. See: vagrantup.com.
 
-  # Build against CentOS 6.4, without any config management utilities.
+  # Build against Ubuntu 12.04, without any config management utilities.
   config.vm.box = "ubuntu1204"
   config.vm.box_url = "http://puppet-vagrant-boxes.puppetlabs.com/ubuntu-server-12042-x64-vbox4210-nocm.box"
 
