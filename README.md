@@ -10,20 +10,22 @@ Read more about Ansible and how I use it to manage infrastructure in [Ansible fo
 
 # VMs/Apps Currently Present
 
-  - **Apache Solr** (Java-based text search service)
-  - **Drupal** (LAMP/LEMP-based Content Management System)
-  - **GitLab** (Ruby-based GitHub-like Git web interface)
-  - **Gogs** (Go-based GitHub-like Git web interface)
-  - **Jenkins** (Java-based Continuous Integration server)
-  - **LAMP** (Linux, Apache, MySQL, and PHP)
-  - **LEMP** (Linux Nginx, MySQL, and PHP-fpm)
-  - **Munin** (Munin and munin-node monitoring server)
-  - **Phergie** (PHP IRC Bot)
-  - **SVN** (An SVN server using Apache for a web interface)
-  - **Svn2Git** (A VM which includes KDE's Svn2Git for repository conversions)
+  - **Drupal** (`drupal` - LAMP/LEMP-based Content Management System)
+  - **ELK** (`elk` - Log monitoring - Elasticsearch, Logstash, Kibana)
+  - **GitLab** (`gitlab` - Ruby-based GitHub-like Git web interface)
+  - **Gogs** (`gogs` - Go-based GitHub-like Git web interface)
+  - **Jenkins** (`jenkins` - Java-based Continuous Integration server)
+  - **LAMP** (`lamp` - Linux, Apache, MySQL, and PHP)
+  - **LEMP** (`lemp` - Linux Nginx, MySQL, and PHP-fpm)
+  - **Munin** (`munin` - Munin and munin-node monitoring server)
+  - **Phergie** (`phergie` - PHP IRC Bot)
+  - **Apache Solr** (`solr` - Java-based text search service)
+  - **SVN** (`svn` - An SVN server using Apache for a web interface)
+  - **Svn2Git** (`svn2git` - A VM which includes KDE's Svn2Git for repository conversions)
 
 # To be added
 
   - SonarQube
-  - Node.js App Server
+  - Node.js App
+  - Wordpress
   - ...
