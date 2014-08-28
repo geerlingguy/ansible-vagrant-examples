@@ -7,8 +7,6 @@
 # @todo - Install postfix `yum -y install postfix`.
 #
 # @author Jeff Geerling (2014).
-#
-# @see http://www.ansibleworks.com/docs/bestpractices.html
 
 - hosts: gitlab
   gather_facts: yes

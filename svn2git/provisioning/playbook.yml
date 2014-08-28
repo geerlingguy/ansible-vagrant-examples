@@ -5,8 +5,6 @@
 # by running `vagrant provision` again.
 #
 # @author Jeff Geerling (2014).
-#
-# @see http://www.ansibleworks.com/docs/bestpractices.html
 
 - hosts: svn2git
   gather_facts: yes
