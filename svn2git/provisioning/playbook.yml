@@ -1,8 +1,5 @@
 ---
-# Ansible playbook for a Git2Svn server.
-#
-# If this is being used within a Vagrant profile, you can update your server
-# by running `vagrant provision` again.
+# Ansible playbook for an SVN2Git server.
 #
 # @author Jeff Geerling (2014).
 

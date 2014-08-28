@@ -1,9 +1,6 @@
 ---
 # Ansible playbook for an ELK (Elasticsearch, Logstash, Kibana) logging server.
 #
-# If this is being used within a Vagrant profile, you can update your server
-# by running `vagrant provision` again.
-#
 # @author Jeff Geerling (2014).
 
 - hosts: logs
