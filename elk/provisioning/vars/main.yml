@@ -9,3 +9,11 @@ nginx_remove_default_vhost: true
 kibana_server_name: logs
 kibana_username: kibana
 kibana_password: password
+
+logstash_monitor_local_syslog: false
+logstash_forwarder_files:
+  - paths:
+      - /var/log/syslog
+      - /var/log/auth.log
+    fields:
+      type: syslog
