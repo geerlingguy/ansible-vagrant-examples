@@ -1,0 +1,7 @@
+geerlingguy.firewall
+geerlingguy.ntp
+geerlingguy.repo-epel
+geerlingguy.repo-remi
+geerlingguy.php
+geerlingguy.git
+geerlingguy.phergie
