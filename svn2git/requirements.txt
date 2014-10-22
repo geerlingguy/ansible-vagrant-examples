@@ -1,0 +1,4 @@
+geerlingguy.repo-epel
+geerlingguy.svn
+geerlingguy.git
+geerlingguy.svn2git

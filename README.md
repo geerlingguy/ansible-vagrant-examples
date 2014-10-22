@@ -27,5 +27,4 @@ Read more about Ansible and how I use it to manage infrastructure in [Ansible fo
 
   - SonarQube
   - Node.js App
-  - Wordpress
   - ...
