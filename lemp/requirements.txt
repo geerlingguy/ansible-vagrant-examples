@@ -1,0 +1,6 @@
+geerlingguy.firewall
+geerlingguy.repo-epel
+geerlingguy.repo-remi
+geerlingguy.mysql
+geerlingguy.nginx
+geerlingguy.php
