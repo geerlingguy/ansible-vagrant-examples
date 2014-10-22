@@ -37,4 +37,9 @@ GitLab's default administrator account details are below; be sure to login immed
     admin@local.host
     5iveL!fe
 
+Or
+    root
+    5iveL!fe
+  
+
 If you'd like additional assistance editing your hosts file, please read [How do I modify my hosts file?](http://www.rackspace.com/knowledge_center/article/how-do-i-modify-my-hosts-file) from Rackspace.
