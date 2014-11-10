@@ -21,3 +21,5 @@ php_packages:
 
 mysql_root_password: root
 mysql_enablerepo: remi
+
+nginx_worker_connections: 1024

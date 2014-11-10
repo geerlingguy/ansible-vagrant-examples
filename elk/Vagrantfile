@@ -4,15 +4,14 @@
 VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-  # Build against Ubuntu 12.04, without any config management utilities.
-  config.vm.box = "ubuntu1204"
-  config.vm.box_url = "http://puppet-vagrant-boxes.puppetlabs.com/ubuntu-server-12042-x64-vbox4210-nocm.box"
+  config.vm.box = "geerlingguy/ubuntu1204"
 
-  config.vm.provider :virtualbox do |vb|
-    vb.customize ["modifyvm", :id, "--name", "logs"]
-    vb.customize ["modifyvm", :id, "--memory", 512]
-    vb.customize ["modifyvm", :id, "--cpus", 2]
-    vb.customize ["modifyvm", :id, "--ioapic", "on"]
+  config.vm.provider :virtualbox do |v|
+    v.customize ["modifyvm", :id, "--name", "logs"]
+    v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
+    v.customize ["modifyvm", :id, "--memory", 512]
+    v.customize ["modifyvm", :id, "--cpus", 2]
+    v.customize ["modifyvm", :id, "--ioapic", "on"]
   end
 
   config.vm.hostname = "logs"
@@ -22,7 +21,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.define :logs do |logs_config|
   end
 
-  # Enable Ansible provisioner.
+  # Ansible provisioner.
   config.vm.provision :ansible do |ansible|
     ansible.playbook = "provisioning/playbook.yml"
     ansible.inventory_path = "provisioning/inventory"

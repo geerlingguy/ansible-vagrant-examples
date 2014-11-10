@@ -6,4 +6,4 @@ firewall_allowed_tcp_ports:
   - "80"
 
 apache_vhosts:
-  - {servername: "munin", documentroot: "/var/cache/munin/www"}
+  - {servername: "munin", documentroot: "/var/www/html/munin/"}
