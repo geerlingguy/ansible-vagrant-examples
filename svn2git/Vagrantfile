@@ -2,7 +2,7 @@
 # vi: set ft=ruby :
 
 Vagrant.configure("2") do |config|
-  config.vm.box = "centos64"
+  config.vm.box = "geerlingguy/centos6"
 
   config.vm.provider :virtualbox do |v|
     v.customize ["modifyvm", :id, "--name", "svn2git"]
