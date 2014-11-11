@@ -10,9 +10,6 @@ firewall_allowed_tcp_ports:
   - "443"
   - "8080"
 
-java_packages:
-  - java-1.6.0-openjdk
-
 jenkins_plugins:
   - git
   - ssh
