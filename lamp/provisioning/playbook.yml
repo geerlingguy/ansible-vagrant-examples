@@ -12,8 +12,6 @@
   roles:
     - geerlingguy.firewall
     - geerlingguy.ntp
-    - geerlingguy.repo-epel
-    - geerlingguy.repo-remi
     - geerlingguy.mysql
     - geerlingguy.apache
     - geerlingguy.php
