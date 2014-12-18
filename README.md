@@ -11,7 +11,7 @@ Read more about Ansible and how I use it to manage infrastructure in [Ansible fo
 # VMs/Apps Currently Present
 
   - **Drupal** (`drupal` - LAMP/LEMP-based Content Management System)
-  - **ELK** (`elk` - Log monitoring - Elasticsearch, Logstash, Kibana)
+  - **ELK** (`elk` - Log monitoring (Elasticsearch, Logstash, Kibana) and forwarding (Logstash forwarder))
   - **GitLab** (`gitlab` - Ruby-based GitHub-like Git web interface)
   - **Gogs** (`gogs` - Go-based GitHub-like Git web interface)
   - **Jenkins** (`jenkins` - Java-based Continuous Integration server)
