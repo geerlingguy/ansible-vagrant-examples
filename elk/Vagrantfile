@@ -7,24 +7,34 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "geerlingguy/ubuntu1204"
 
   config.vm.provider :virtualbox do |v|
-    v.customize ["modifyvm", :id, "--name", "logs"]
     v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
     v.customize ["modifyvm", :id, "--memory", 1024]
     v.customize ["modifyvm", :id, "--cpus", 2]
     v.customize ["modifyvm", :id, "--ioapic", "on"]
   end
 
-  config.vm.hostname = "logs"
-  config.vm.network :private_network, ip: "192.168.9.90"
+  # ELK server.
+  config.vm.define "logs" do |logs|
+    logs.vm.hostname = "logs"
+    logs.vm.network :private_network, ip: "192.168.9.90"
 
-  # Set the name of the VM. See: http://stackoverflow.com/a/17864388/100134
-  config.vm.define :logs do |logs_config|
+    logs.vm.provision :ansible do |ansible|
+      ansible.playbook = "provisioning/elk/playbook.yml"
+      ansible.inventory_path = "provisioning/elk/inventory"
+      ansible.sudo = true
+    end
   end
 
-  # Ansible provisioner.
-  config.vm.provision :ansible do |ansible|
-    ansible.playbook = "provisioning/playbook.yml"
-    ansible.inventory_path = "provisioning/inventory"
-    ansible.sudo = true
+  # Web server.
+  config.vm.define "webs" do |webs|
+    webs.vm.hostname = "webs"
+    webs.vm.network :private_network, ip: "192.168.9.91"
+
+    webs.vm.provision :ansible do |ansible|
+      ansible.playbook = "provisioning/web/playbook.yml"
+      ansible.inventory_path = "provisioning/web/inventory"
+      ansible.sudo = true
+    end
   end
+
 end

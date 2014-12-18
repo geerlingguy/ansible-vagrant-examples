@@ -4,7 +4,10 @@
 
 Vagrant and VirtualBox (or some other VM provider) can be used to quickly build or rebuild virtual servers.
 
-This Vagrant profile installs [Elasticsearch](http://www.elasticsearch.org/), [Logstash](http://logstash.net/), and [Kibana](http://www.elasticsearch.org/overview/kibana/) using the [Ansible](http://www.ansible.com/) provisioner.
+This Vagrant profile configures two servers:
+
+  1. A server with the ELK stack ([Elasticsearch](http://www.elasticsearch.org/), [Logstash](http://logstash.net/), and [Kibana](http://www.elasticsearch.org/overview/kibana/)) using the [Ansible](http://www.ansible.com/) provisioner.
+  2. A server with the Nginx and [Logstash Forwarder](https://github.com/elasticsearch/logstash-forwarder) using the [Ansible](http://www.ansible.com/) provisioner, which routes Nginx access logs to the first server.
 
 ## Getting Started
 
@@ -18,18 +21,19 @@ To use the vagrant file, you will need to have done the following:
   4. Open a shell prompt (Terminal app on a Mac) and cd into the folder containing the `Vagrantfile`
   5. 5. Run the following command to install the necessary Ansible roles for this profile: `$ ansible-galaxy install -r requirements.txt`
 
-Once all of that is done, you can simply type in `vagrant up`, and Vagrant will create a new VM, install the base box, and configure it.
+Once all of that is done, you can simply type in `vagrant up`, and Vagrant will create both new VMs and configure them.
 
-Once the new VM is up and running (after `vagrant up` is complete and you're back at the command prompt), you can log into it via SSH if you'd like by typing in `vagrant ssh`. Otherwise, the next steps are below.
+Once the VMs are up and running (after `vagrant up` is complete and you're back at the command prompt), you can log into either one via SSH if you'd like by typing in `vagrant ssh [name]` (either `logs` for the ELK server, or `webs` for the Nginx server). Otherwise, the next steps are below.
 
 ### Setting up your hosts file
 
-You need to modify your host machine's hosts file (Mac/Linux: `/etc/hosts`; Windows: `%systemroot%\system32\drivers\etc\hosts`), adding the line below:
+You need to modify your host machine's hosts file (Mac/Linux: `/etc/hosts`; Windows: `%systemroot%\system32\drivers\etc\hosts`), adding the lines below:
 
     192.168.9.90  logs
+    192.168.9.91  webs
 
-(Where `logs`) is the hostname you have configured in the `Vagrantfile`).
+(Where `logs`/`webs` is the hostname you have configured in the `Vagrantfile`).
 
-After that is configured, you could visit http://logs/ in a browser, and you'll see the Kibana dashboard. Nice!
+After that is configured, you could visit http://logs/ in a browser, and you'll see the Kibana dashboard, and you can visit http://webs/, and you'll see Nginx's default index page. Nice!
 
 If you'd like additional assistance editing your hosts file, please read [How do I modify my hosts file?](http://www.rackspace.com/knowledge_center/article/how-do-i-modify-my-hosts-file) from Rackspace.
