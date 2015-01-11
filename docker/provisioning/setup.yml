@@ -1,10 +1,15 @@
 ---
-- name: Add vagrant user to docker group.
-  user:
-    name: vagrant
-    groups: docker
-    append: yes
-  sudo: yes
+# You can add users to the docker group to allow them to manage docker
+# containers, but in this case, to ensure idempotence, we're just using sudo.
+# Because Ansible uses ControlPersist for SSH connections, the first time this
+# playbook is run, the docker commands fail, since the persisted connection as
+# the vagrant user isn't yet added to the 'docker' group.
+# - name: Add vagrant user to docker group.
+#   user:
+#     name: vagrant
+#     groups: docker
+#     append: yes
+#   sudo: yes
 
 - name: Install Pip.
   apt: name=python-pip state=installed
