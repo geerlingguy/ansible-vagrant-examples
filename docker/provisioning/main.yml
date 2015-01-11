@@ -1,0 +1,9 @@
+---
+- hosts: all
+
+  roles:
+    - { role: angstwad.docker_ubuntu, sudo: yes }
+
+  tasks:
+    - include: setup.yml
+    - include: docker.yml

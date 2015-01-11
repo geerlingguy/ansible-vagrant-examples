@@ -1,0 +1,35 @@
+---
+- name: Build Docker images from Dockerfiles.
+  docker_image:
+    name: "{{ item.name }}"
+    tag: "{{ item.tag }}"
+    path: "/vagrant/provisioning/{{ item.directory }}"
+    state: build
+  with_items:
+    - { name: geerlingguy/data, tag: "data", directory: data }
+    - { name: geerlingguy/www, tag: "apache", directory: www }
+    - { name: geerlingguy/db, tag: mysql, directory: db }
+
+# Data containers don't need to be running to be utilized.
+- name: Run a Data container.
+  docker:
+    image: geerlingguy/data:data
+    name: data
+    state: present
+
+- name: Run an Apache container.
+  docker:
+    image: geerlingguy/www:apache
+    name: www
+    state: running
+    command: /usr/sbin/apache2ctl -D FOREGROUND
+    ports: "80:80"
+
+- name: Run a MySQL container.
+  docker:
+    image: geerlingguy/db:mysql
+    name: db
+    state: running
+    # volumes_from: "TODO"
+    command: /usr/bin/mysqld_safe
+    ports: "3306:3306"

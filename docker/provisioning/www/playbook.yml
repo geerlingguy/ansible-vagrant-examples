@@ -1,0 +1,36 @@
+---
+- hosts: localhost
+  sudo: yes
+
+  vars:
+    apache_vhosts:
+      - servername: "docker.dev"
+        documentroot: "/opt/www"
+
+  pre_tasks:
+    - name: Get host IP address.
+      shell: "/sbin/ip route|awk '/default/ { print $3 }'"
+      register: host_ip
+      changed_when: false
+
+    - name: Set host_ip_address variable.
+      set_fact:
+        host_ip_address: "{{ host_ip.stdout }}"
+
+  roles:
+    - geerlingguy.apache
+    - geerlingguy.php
+    - geerlingguy.php-mysql
+
+  tasks:
+    - name: Ensure www directory exists.
+      file:
+        path: /opt/www
+        state: directory
+        mode: 0755
+
+    - name: Copy PHP script into place.
+      template:
+        src: /etc/ansible/index.php.j2
+        dest: /opt/www/index.php
+        mode: 0755

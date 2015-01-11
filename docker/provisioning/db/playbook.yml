@@ -1,0 +1,15 @@
+---
+- hosts: localhost
+  sudo: yes
+
+  vars:
+    mysql_innodb_log_file_size: "5M"
+
+    mysql_users:
+      - name: admin
+        host: "%"
+        password: admin
+        priv: "*.*:USAGE"
+
+  roles:
+    - geerlingguy.mysql

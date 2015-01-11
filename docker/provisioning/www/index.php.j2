@@ -1,0 +1,61 @@
+<?php
+/**
+ * @file
+ * Infrastructure test page.
+ *
+ * DO NOT use this in production. It is simply a PoC.
+ */
+
+$mysql_host = "{{ host_ip_address }}";
+if ($result = mysql_test_connection($mysql_host)) {
+  $mysql_result = '<span style="color: green;">PASS</span>';
+}
+else {
+  $mysql_result = '<span style="color: red;">FAIL</span>';
+}
+
+/**
+ * Connect to a MySQL server and test the connection.
+ *
+ * @param string $host
+ *   IP Address or hostname of the server.
+ *
+ * @return array
+ *   Array with keys 'success' (bool) and 'status' ('slave' or 'master').
+ *   Empty if connection failure.
+ */
+function mysql_test_connection($host) {
+  $username = 'admin';
+  $password = 'admin';
+  try {
+    $db = new PDO(
+      'mysql:host=' . $host . ';dbname=information_schema',
+      $username,
+      $password,
+      array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+
+    // Query to see if the server is configured as a master or slave.
+    $statement = $db->prepare("SELECT variable_value
+      FROM information_schema.global_variables
+      WHERE variable_name = 'LOG_BIN';");
+    $statement->execute();
+    $result = $statement->fetch();
+
+    return TRUE;
+  }
+  catch (PDOException $e) {
+    return FALSE;
+  }
+}
+?>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Apache + PHP + MySQL Docker Example</title>
+  <style>* { font-family: Helvetica, Arial, sans-serif }</style>
+</head>
+<body>
+  <h1>Apache + PHP + MySQL Docker Example</h1>
+  <p>MySQL Connection: <?php print $mysql_result; ?></p>
+</body>
+</html>
