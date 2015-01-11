@@ -10,6 +10,7 @@ Read more about Ansible and how I use it to manage infrastructure in [Ansible fo
 
 # VMs/Apps Currently Present
 
+  - **Docker** (`docker`) - Docker container building and management (builds a simple LAMP stack).
   - **Drupal** (`drupal` - LAMP/LEMP-based Content Management System)
   - **ELK** (`elk` - Log monitoring (Elasticsearch, Logstash, Kibana) and forwarding (Logstash forwarder))
   - **GitLab** (`gitlab` - Ruby-based GitHub-like Git web interface)
@@ -28,3 +29,12 @@ Read more about Ansible and how I use it to manage infrastructure in [Ansible fo
   - SonarQube
   - Node.js App
   - ...
+
+## License
+
+MIT license.
+
+## Author Information
+
+Created in 2014 by [Jeff Geerling](http://jeffgeerling.com/), author of [Ansible for DevOps](http://ansiblefordevops.com/).
+

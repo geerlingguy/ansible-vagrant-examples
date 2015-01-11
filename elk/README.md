@@ -37,3 +37,7 @@ You need to modify your host machine's hosts file (Mac/Linux: `/etc/hosts`; Wind
 After that is configured, you could visit http://logs/ in a browser, and you'll see the Kibana dashboard, and you can visit http://webs/, and you'll see Nginx's default index page. Nice!
 
 If you'd like additional assistance editing your hosts file, please read [How do I modify my hosts file?](http://www.rackspace.com/knowledge_center/article/how-do-i-modify-my-hosts-file) from Rackspace.
+
+## Author Information
+
+Created in 2014 by [Jeff Geerling](http://jeffgeerling.com/), author of [Ansible for DevOps](http://ansiblefordevops.com/).

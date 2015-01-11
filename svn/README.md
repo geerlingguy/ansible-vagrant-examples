@@ -14,10 +14,7 @@ To use the vagrant file, you will need to have done the following:
 
   1. Download and Install [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
   2. Download and Install [Vagrant](https://www.vagrantup.com/downloads.html)
-  3. Install [Ansible](http://ansibleworks.com/) (Steps adapted from [this guide](http://devopsu.com/guides/ansible-mac-osx.html)):
-    a. Install [Homebrew](http://brew.sh/)
-    b. Install Python 2.7.x (`brew install python`).
-    c. Install Ansible (`sudo pip install ansible`).
+  3. Install [Ansible](http://docs.ansible.com/intro_installation.html)
   4. Open a shell prompt (Terminal app on a Mac) and cd into the folder containing the `Vagrantfile`
   5. Run the following command to install the necessary Ansible roles for this profile: `$ ansible-galaxy install -r requirements.txt`
 
@@ -36,3 +33,7 @@ You need to modify your host machine's hosts file (Mac/Linux: `/etc/hosts`; Wind
 After that is configured, you could visit http://svn/svn/repo-name in a browser, and you'll see the SVN repository's home page. Nice!
 
 If you'd like additional assistance editing your hosts file, please read [How do I modify my hosts file?](http://www.rackspace.com/knowledge_center/article/how-do-i-modify-my-hosts-file) from Rackspace.
+
+## Author Information
+
+Created in 2014 by [Jeff Geerling](http://jeffgeerling.com/), author of [Ansible for DevOps](http://ansiblefordevops.com/).
