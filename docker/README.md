@@ -1,4 +1,4 @@
-# Ansible Vagrant profile for Drupal
+# Ansible Vagrant profile for Docker
 
 ## Background
 
