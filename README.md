@@ -10,7 +10,7 @@ Read more about Ansible and how I use it to manage infrastructure in [Ansible fo
 
 # VMs/Apps Currently Present
 
-  - **Docker** (`docker`) - Docker container building and management (builds a simple LAMP stack).
+  - **Docker** (`docker` - Docker container building and management (builds a simple LAMP stack).
   - **Drupal** (`drupal` - LAMP/LEMP-based Content Management System)
   - **ELK** (`elk` - Log monitoring (Elasticsearch, Logstash, Kibana) and forwarding (Logstash forwarder))
   - **GitLab** (`gitlab` - Ruby-based GitHub-like Git web interface)
