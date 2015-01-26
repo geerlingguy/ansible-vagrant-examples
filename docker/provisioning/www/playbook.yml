@@ -2,12 +2,7 @@
 - hosts: localhost
   sudo: yes
 
-  vars:
-    apache_vhosts:
-      - servername: "docker.dev"
-        documentroot: "/opt/www"
-
-  pre_tasks:
+  tasks:
     - name: Get host IP address.
       shell: "/sbin/ip route|awk '/default/ { print $3 }'"
       register: host_ip
@@ -17,7 +12,6 @@
       set_fact:
         host_ip_address: "{{ host_ip.stdout }}"
 
-  tasks:
     - name: Ensure www directory exists.
       file:
         path: /opt/www

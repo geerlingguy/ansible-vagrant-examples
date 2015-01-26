@@ -4,7 +4,7 @@
 
 [Docker](https://www.docker.com/) is used to build and manage linux containers. [Ansible](http://www.ansible.com/) is useful in managing the Docker lifecycle.
 
-This Vagrant profile uses Ansible to configure a local VM, installing Docker, then building and running three containers for a simple LAMP stack, Docker-style.
+This Vagrant profile uses Ansible to configure a local VM, installing Docker, then building and running three containers for a simple Flask + MySQL web app stack, Docker-style.
 
 ## Getting Started
 
@@ -28,9 +28,7 @@ You need to modify your host machine's hosts file (Mac/Linux: `/etc/hosts`; Wind
 
     192.168.33.39  docker.dev
 
-(Where `docker.dev` is the hostname you have configured as the Apache `servername` inside `provisioning/www/playbook.yml`).
-
-After that is configured, you could visit http://docker.dev/ in a browser, and you'll see the test page, confirming the Apache + PHP container can communicate with the MySQL container. Nice!
+After that is configured, you could visit http://docker.dev/ in a browser, and you'll see the test page, confirming the Flask container can communicate with the MySQL container. Nice!
 
 If you'd like additional assistance editing your hosts file, please read [How do I modify my hosts file?](http://www.rackspace.com/knowledge_center/article/how-do-i-modify-my-hosts-file) from Rackspace.
 
