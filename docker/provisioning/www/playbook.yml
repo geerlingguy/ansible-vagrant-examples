@@ -17,11 +17,6 @@
       set_fact:
         host_ip_address: "{{ host_ip.stdout }}"
 
-  roles:
-    - geerlingguy.apache
-    - geerlingguy.php
-    - geerlingguy.php-mysql
-
   tasks:
     - name: Ensure www directory exists.
       file:
@@ -29,8 +24,27 @@
         state: directory
         mode: 0755
 
-    - name: Copy PHP script into place.
+    - name: Install Python MySQL dependencies.
+      apt: "name={{ item }} state=present"
+      with_items:
+        - libmysqlclient-dev
+        - python-dev
+
+    - name: Install Flask and SQLAlchemy.
+      pip: "name={{ item }} state=present"
+      with_items:
+        - flask
+        - flask-sqlalchemy
+        - mysql-python
+
+    - name: Copy Flask app into place.
       template:
-        src: /etc/ansible/index.php.j2
-        dest: /opt/www/index.php
+        src: /etc/ansible/index.py.j2
+        dest: /opt/www/index.py
+        mode: 0755
+
+    - name: Copy Flask templates into place.
+      copy:
+        src: /etc/ansible/templates
+        dest: /opt/www
         mode: 0755

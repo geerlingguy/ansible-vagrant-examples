@@ -6,28 +6,28 @@
     path: "/vagrant/provisioning/{{ item.directory }}"
     state: build
   with_items:
-    - { name: geerlingguy/data, tag: "data", directory: data }
-    - { name: geerlingguy/www, tag: "apache", directory: www }
-    - { name: geerlingguy/db, tag: mysql, directory: db }
+    - { name: data, tag: "data", directory: data }
+    - { name: www, tag: "flask", directory: www }
+    - { name: db, tag: mysql, directory: db }
 
 # Data containers don't need to be running to be utilized.
 - name: Run a Data container.
   docker:
-    image: geerlingguy/data:data
+    image: data:data
     name: data
     state: present
 
 - name: Run an Apache container.
   docker:
-    image: geerlingguy/www:apache
+    image: www:flask
     name: www
     state: running
-    command: /usr/sbin/apache2ctl -D FOREGROUND
+    command: python /opt/www/index.py
     ports: "80:80"
 
 - name: Run a MySQL container.
   docker:
-    image: geerlingguy/db:mysql
+    image: db:mysql
     name: db
     state: running
     volumes_from: data
