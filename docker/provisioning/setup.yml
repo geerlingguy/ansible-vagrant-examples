@@ -1,10 +1,9 @@
 ---
 # You can add users to the docker group to allow them to manage docker
-# containers. To ensure idempotence, we're simply using sudo for the purposes of
-# the playbook. Because Ansible uses ControlPersist for SSH connections, the
-# first time this playbook is run, the docker commands would fail if run under
-# the vagrant user, since the persisted connection isn't yet added to the
-# 'docker' group.
+# containers. This playbook uses sudo rather than the vagrant user because
+# Ansible uses ControlPersist for SSH connections. The first time this playbook
+# runs, the docker commands would fail if run by the vagrant user, since the
+# persisted connection state isn't aware of the addition of the 'docker' group.
 - name: Add vagrant user to docker group.
   user:
     name: vagrant
