@@ -12,25 +12,6 @@
       set_fact:
         host_ip_address: "{{ host_ip.stdout }}"
 
-    - name: Ensure www directory exists.
-      file:
-        path: /opt/www
-        state: directory
-        mode: 0755
-
-    - name: Install Python MySQL dependencies.
-      apt: "name={{ item }} state=present"
-      with_items:
-        - libmysqlclient-dev
-        - python-dev
-
-    - name: Install Flask and SQLAlchemy.
-      pip: "name={{ item }} state=present"
-      with_items:
-        - flask
-        - flask-sqlalchemy
-        - mysql-python
-
     - name: Copy Flask app into place.
       template:
         src: /etc/ansible/index.py.j2
