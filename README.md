@@ -20,6 +20,7 @@ Read more about Ansible and how I use it to manage infrastructure in [Ansible fo
   - **LEMP** (`lemp` - Linux Nginx, MySQL, and PHP-fpm)
   - **Munin** (`munin` - Munin and munin-node monitoring server)
   - **Phergie** (`phergie` - PHP IRC Bot)
+  - **Rails** (`rails` - Ruby on Rails demo app running on Passenger/Nginx)
   - **Apache Solr** (`solr` - Java-based text search service)
   - **SVN** (`svn` - An SVN server using Apache for a web interface)
   - **Svn2Git** (`svn2git` - A VM which includes KDE's Svn2Git for repository conversions)

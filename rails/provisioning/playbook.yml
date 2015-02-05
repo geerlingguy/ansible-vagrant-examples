@@ -1,0 +1,48 @@
+---
+- hosts: all
+  gather_facts: yes
+  sudo: yes
+
+  vars_files:
+    - vars/main.yml
+
+  roles:
+    - geerlingguy.ruby
+    - geerlingguy.nodejs
+    - geerlingguy.passenger
+
+  tasks:
+    # Install Rails.
+    - name: Install rails dependencies.
+      apt: "name={{ item }} state=present"
+      with_items:
+        - zlib1g-dev
+        - libsqlite3-dev
+
+    - command: which rails
+      register: rails_result
+      changed_when: false
+      failed_when: false
+
+    - name: Install rails.
+      shell: gem install rails --no-ri --no-rdoc
+      when: rails_result.rc != 0
+
+    # Build demo app.
+    - name: Check if Rails app exists.
+      stat: "path={{ passenger_app_root }}"
+      register: rails_app
+
+    - name: Create Rails demo app if it doesn't yet exist.
+      shell: "rails new demo chdir=/opt"
+      when: rails_app.stat.exists == false
+      notify: restart nginx
+
+    - name: Set correct permissions on demo app.
+      file:
+        path: /opt/demo
+        owner: "{{ nginx_user }}"
+        group: "{{ nginx_user }}"
+        state: directory
+        recurse: yes
+      notify: restart nginx
