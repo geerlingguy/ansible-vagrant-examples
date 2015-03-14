@@ -25,12 +25,6 @@ Read more about Ansible and how I use it to manage infrastructure in [Ansible fo
   - **SVN** (`svn` - An SVN server using Apache for a web interface)
   - **Svn2Git** (`svn2git` - A VM which includes KDE's Svn2Git for repository conversions)
 
-# To be added
-
-  - SonarQube
-  - Node.js App
-  - ...
-
 ## License
 
 MIT license.
