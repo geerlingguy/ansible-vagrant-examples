@@ -1,0 +1,1 @@
+nodejs ansible_ssh_host=192.168.33.27 ansible_ssh_port=22

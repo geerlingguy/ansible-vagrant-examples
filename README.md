@@ -19,6 +19,7 @@ Read more about Ansible and how I use it to manage infrastructure in [Ansible fo
   - **LAMP** (`lamp` - Linux, Apache, MySQL, and PHP)
   - **LEMP** (`lemp` - Linux Nginx, MySQL, and PHP-fpm)
   - **Munin** (`munin` - Munin and munin-node monitoring server)
+  - **Node.js** (`nodejs` - Node.js-based API app using restify)
   - **Phergie** (`phergie` - PHP IRC Bot)
   - **Rails** (`rails` - Ruby on Rails demo app running on Passenger/Nginx)
   - **Apache Solr** (`solr` - Java-based text search service)
