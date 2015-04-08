@@ -1,17 +1,17 @@
 ---
 # Ansible playbook for an Apache Solr server.
 #
-# @author Jeff Geerling (2014).
+# @author Jeff Geerling (2015).
 
 - hosts: solr
   gather_facts: yes
 
-  vars_files:
-    - vars/main.yml
+  vars:
+    firewall_allowed_tcp_ports:
+      - "22"
+      - "8983"
 
   roles:
     - geerlingguy.firewall
-    - geerlingguy.ntp
     - geerlingguy.java
-    - geerlingguy.tomcat6
     - geerlingguy.solr
