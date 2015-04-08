@@ -30,7 +30,7 @@ You need to modify your host machine's hosts file (Mac/Linux: `/etc/hosts`; Wind
 
 (Where `solr`) is the hostname you have configured in the `Vagrantfile`).
 
-After that is configured, you could visit http://solr:8080/solr in a browser, and you'll see the "Welcome to Solr!" page. Nice!
+After that is configured, run `sudo iptables -F`, and you could visit `http://solr:8983/solr` in a browser, and you'll see the Apache SOLR Dashboard page. Nice!
 
 If you'd like additional assistance editing your hosts file, please read [How do I modify my hosts file?](http://www.rackspace.com/knowledge_center/article/how-do-i-modify-my-hosts-file) from Rackspace.
 
