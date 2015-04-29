@@ -1,0 +1,17 @@
+---
+- hosts: sonarqube
+  gather_facts: yes
+
+  vars_files:
+    - vars/main.yml
+
+  pre_tasks:
+    - name: Ensure unzip is installed.
+      apt: name=unzip state=installed
+
+  roles:
+    - geerlingguy.firewall
+    - geerlingguy.ntp
+    - geerlingguy.java
+    - geerlingguy.mysql
+    - geerlingguy.sonar

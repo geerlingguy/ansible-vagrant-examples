@@ -23,6 +23,7 @@ Read more about Ansible and how I use it to manage infrastructure in [Ansible fo
   - **Phergie** (`phergie` - PHP IRC Bot)
   - **Rails** (`rails` - Ruby on Rails demo app running on Passenger/Nginx)
   - **Apache Solr** (`solr` - Java-based text search service)
+  - **SonarQube** (`sonarqube` - Java-based code quality analysis and review tool)
   - **SVN** (`svn` - An SVN server using Apache for a web interface)
   - **Svn2Git** (`svn2git` - A VM which includes KDE's Svn2Git for repository conversions)
 

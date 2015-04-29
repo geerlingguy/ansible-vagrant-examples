@@ -1,8 +1,4 @@
 ---
-# Ansible playbook for an Apache Solr server.
-#
-# @author Jeff Geerling (2014).
-
 - hosts: jenkins
   gather_facts: yes
 

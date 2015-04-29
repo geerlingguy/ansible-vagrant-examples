@@ -1,0 +1,6 @@
+---
+ntp_timezone: America/Chicago
+
+firewall_allowed_tcp_ports:
+  - "22"
+  - "9000"
