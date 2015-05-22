@@ -3,6 +3,7 @@ FROM ansible/ubuntu14.04-ansible
 MAINTAINER Jeff Geerling <geerlingguy@mac.com>
 
 # Install Flask app dependencies.
+RUN apt-get update
 RUN apt-get install -y libmysqlclient-dev python-dev
 RUN pip install flask flask-sqlalchemy mysql-python
 
