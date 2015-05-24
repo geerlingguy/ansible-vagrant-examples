@@ -21,8 +21,15 @@
     - name: Set up virtual host for testing.
       copy:
         src: files/example.conf
-        dest: /etc/nginx/conf.d/example.conf
+        dest: /etc/nginx/sites-enabled/example.conf
         owner: root
         group: root
         mode: 0644
       notify: restart nginx
+
+    - name: Ensure logs server is in hosts file.
+      lineinfile:
+        dest: /etc/hosts
+        regexp: '.*logs$'
+        line: "192.168.9.90"
+        state: present
