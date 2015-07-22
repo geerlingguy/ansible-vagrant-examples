@@ -14,6 +14,7 @@ Read more about Ansible and how I use it to manage infrastructure in [Ansible fo
   - **Drupal** (`drupal` - LAMP/LEMP-based Content Management System)
   - **ELK** (`elk` - Log monitoring (Elasticsearch, Logstash, Kibana) and forwarding (Logstash forwarder))
   - **GitLab** (`gitlab` - Ruby-based GitHub-like Git web interface)
+  - **GlusterFS** (`gluster` - A robust distributed filesystem)
   - **Gogs** (`gogs` - Go-based GitHub-like Git web interface)
   - **Jenkins** (`jenkins` - Java-based Continuous Integration server)
   - **LAMP** (`lamp` - Linux, Apache, MySQL, and PHP)
