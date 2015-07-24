@@ -16,7 +16,7 @@
         - "{{ gluster_brick_dir }}"
         - "{{ gluster_mount_dir }}"
 
-    - name: Create Gluster volume.
+    - name: Configure Gluster volume.
       gluster_volume:
         state: present
         name: "{{ gluster_brick_name }}"
@@ -27,7 +27,7 @@
         force: yes
       run_once: true
 
-    - name: Ensure the Gluster volume is mounted.
+    - name: Ensure Gluster volume is mounted.
       mount:
         name: "{{ gluster_mount_dir }}"
         src: "{{ groups.gluster[0] }}:/{{ gluster_brick_name }}"
