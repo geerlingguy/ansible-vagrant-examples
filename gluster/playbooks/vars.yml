@@ -11,11 +11,9 @@ firewall_allowed_tcp_ports:
   # 24009+ for Gluster <= 3.3; 49152+ for Gluster 3.4+ (one port per server).
   - 24009
   - 24010
-  - 24011
   # Gluster inline NFS server.
   - 38465
   - 38466
-  - 38467
 firewall_allowed_udp_ports:
   - 111
 
