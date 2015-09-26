@@ -1,0 +1,8 @@
+---
+- src: geerlingguy.java
+- src: geerlingguy.nginx
+- src: geerlingguy.elasticsearch
+- src: geerlingguy.elasticsearch-curator
+- src: geerlingguy.kibana
+- src: geerlingguy.logstash
+- src: geerlingguy.logstash-forwarder

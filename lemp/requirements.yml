@@ -1,0 +1,7 @@
+---
+- src: geerlingguy.firewall
+- src: geerlingguy.repo-epel
+- src: geerlingguy.repo-remi
+- src: geerlingguy.mysql
+- src: geerlingguy.nginx
+- src: geerlingguy.php

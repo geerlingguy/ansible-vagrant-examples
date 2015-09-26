@@ -1,7 +1,0 @@
-geerlingguy.java
-geerlingguy.nginx
-geerlingguy.elasticsearch
-geerlingguy.elasticsearch-curator
-geerlingguy.kibana
-geerlingguy.logstash
-geerlingguy.logstash-forwarder

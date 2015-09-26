@@ -1,3 +1,0 @@
-geerlingguy.ruby
-geerlingguy.nodejs
-geerlingguy.passenger

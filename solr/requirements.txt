@@ -1,3 +1,0 @@
-geerlingguy.firewall
-geerlingguy.java
-geerlingguy.solr

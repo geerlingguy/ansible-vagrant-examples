@@ -1,0 +1,6 @@
+---
+- src: geerlingguy.firewall
+- src: geerlingguy.ntp
+- src: geerlingguy.git
+- src: geerlingguy.mysql
+- src: geerlingguy.gogs

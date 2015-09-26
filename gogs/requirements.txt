@@ -1,5 +1,0 @@
-geerlingguy.firewall
-geerlingguy.ntp
-geerlingguy.git
-geerlingguy.mysql
-geerlingguy.gogs
