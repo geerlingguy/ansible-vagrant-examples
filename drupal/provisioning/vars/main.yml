@@ -5,3 +5,6 @@ firewall_allowed_tcp_ports:
   - "22"
   - "80"
   - "443"
+
+apache_create_vhosts: false
+apache_remove_default_vhost: true
