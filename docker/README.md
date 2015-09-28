@@ -28,7 +28,7 @@ You need to modify your host machine's hosts file (Mac/Linux: `/etc/hosts`; Wind
 
     192.168.33.39  docker.dev
 
-After that is configured, you could visit http://docker.dev/ in a browser, and you'll see the test page, confirming the Flask container can communicate with the MySQL container. Nice!
+After that is configured, you could visit http://docker.dev/ in a browser, and you'll see the test page, confirming the Flask container can communicate with the MySQL container.
 
 If you'd like additional assistance editing your hosts file, please read [How do I modify my hosts file?](http://www.rackspace.com/knowledge_center/article/how-do-i-modify-my-hosts-file) from Rackspace.
 

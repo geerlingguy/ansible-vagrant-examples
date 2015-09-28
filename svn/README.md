@@ -30,7 +30,7 @@ You need to modify your host machine's hosts file (Mac/Linux: `/etc/hosts`; Wind
 
 (Where `svn`) is the hostname you have configured in the `Vagrantfile`).
 
-After that is configured, you could visit http://svn/svn/repo-name in a browser, and you'll see the SVN repository's home page. Nice!
+After that is configured, you could visit http://svn/svn/repo-name in a browser, and you'll see the SVN repository's home page.
 
 If you'd like additional assistance editing your hosts file, please read [How do I modify my hosts file?](http://www.rackspace.com/knowledge_center/article/how-do-i-modify-my-hosts-file) from Rackspace.
 
