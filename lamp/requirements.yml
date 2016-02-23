@@ -6,3 +6,4 @@
 - src: geerlingguy.mysql
 - src: geerlingguy.apache
 - src: geerlingguy.php
+- src: geerlingguy.php-mysql
