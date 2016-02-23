@@ -1,6 +1,6 @@
 ---
 - hosts: localhost
-  sudo: yes
+  become: yes
 
   vars:
     mysql_users:

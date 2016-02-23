@@ -9,12 +9,12 @@
     name: vagrant
     groups: docker
     append: yes
-  sudo: yes
+  become: yes
 
 - name: Install Pip.
   apt: name=python-pip state=installed
-  sudo: yes
+  become: yes
 
 - name: Install Docker Python library.
   pip: name=docker-py state=present
-  sudo: yes
+  become: yes

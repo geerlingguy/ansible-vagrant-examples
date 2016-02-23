@@ -1,6 +1,6 @@
 ---
 - hosts: all
-  sudo: yes
+  become: yes
 
   pre_tasks:
     - name: Update apt cache if needed.

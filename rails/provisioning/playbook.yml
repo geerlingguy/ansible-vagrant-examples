@@ -1,7 +1,7 @@
 ---
 - hosts: all
   gather_facts: yes
-  sudo: yes
+  become: yes
 
   vars_files:
     - vars/main.yml

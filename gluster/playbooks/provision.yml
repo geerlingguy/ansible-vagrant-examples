@@ -1,6 +1,6 @@
 ---
 - hosts: gluster
-  sudo: yes
+  become: yes
 
   vars_files:
     - vars.yml
