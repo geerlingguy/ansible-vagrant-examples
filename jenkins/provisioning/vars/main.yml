@@ -7,7 +7,3 @@ firewall_allowed_tcp_ports:
   - "80"
   - "443"
   - "8080"
-
-jenkins_plugins:
-  - git
-  - ssh
