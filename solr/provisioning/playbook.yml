@@ -7,9 +7,15 @@
   gather_facts: yes
 
   vars:
+    java_packages:
+      - openjdk-8-jdk
     firewall_allowed_tcp_ports:
       - "22"
       - "8983"
+
+  pre_tasks:
+    - name: Install repo for Java 8.
+      apt_repository: repo=ppa:openjdk-r/ppa
 
   roles:
     - geerlingguy.firewall
