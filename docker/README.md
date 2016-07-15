@@ -4,7 +4,11 @@
 
 [Docker](https://www.docker.com/) is used to build and manage linux containers. [Ansible](http://www.ansible.com/) is useful in managing the Docker lifecycle.
 
-This Vagrant profile uses Ansible to configure a local VM, installing Docker, then building and running three containers for a simple Flask + MySQL web app stack, Docker-style.
+This Vagrant profile uses Ansible to configure a local VM with Docker, then it uses Ansible to build and run three containers for a simple Flask + MySQL web app stack, Docker-style:
+
+  - `www`: Flask app on an Ubuntu container.
+  - `db`: MySQL database on an Ubuntu container.
+  - `data`: MySQL data volume on a Busybox container (for persistence).
 
 ## Getting Started
 
