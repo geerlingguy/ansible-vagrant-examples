@@ -1,14 +1,14 @@
 ---
 java_packages:
-  - openjdk-7-jdk
-
-nginx_user: www-data
-nginx_worker_connections: 1024
-nginx_remove_default_vhost: true
+  - openjdk-8-jdk
 
 kibana_server_name: logs
 kibana_username: kibana
 kibana_password: password
+
+nginx_user: www-data
+nginx_worker_connections: 1024
+nginx_remove_default_vhost: true
 
 logstash_monitor_local_syslog: false
 logstash_ssl_key_file: elk-vagrant-example.key
