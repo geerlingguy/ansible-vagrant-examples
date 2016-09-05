@@ -15,7 +15,7 @@
 
   roles:
     - geerlingguy.nginx
-    - geerlingguy.logstash-forwarder
+    - geerlingguy.filebeat
 
   tasks:
     - name: Set up virtual host for testing.

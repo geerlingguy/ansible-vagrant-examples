@@ -6,8 +6,8 @@
 - src: geerlingguy.elasticsearch-curator
   version: 1.0.7
 - src: geerlingguy.kibana
-  version: 1.0.8
+  version: 2.0.1
 - src: geerlingguy.logstash
-  version: 2.0.0
-- src: geerlingguy.logstash-forwarder
-  version: 1.0.3
+  version: 2.0.1
+- src: geerlingguy.filebeat
+  version: 0.9.1

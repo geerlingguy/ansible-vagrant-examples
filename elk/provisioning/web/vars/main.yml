@@ -3,15 +3,15 @@ nginx_user: www-data
 nginx_worker_connections: 1024
 nginx_remove_default_vhost: true
 
-logstash_forwarder_logstash_server: logs
-logstash_forwarder_logstash_server_port: 5000
-logstash_forwarder_ssl_certificate_file: elk-vagrant-example.crt
-logstash_forwarder_files:
-  - paths:
-      - /var/log/secure
-    fields:
-      type: syslog
-  - paths:
-      - /var/log/nginx/access.log
-    fields:
-      type: nginx
+# logstash_forwarder_logstash_server: logs
+# logstash_forwarder_logstash_server_port: 5000
+# logstash_forwarder_ssl_certificate_file: elk-vagrant-example.crt
+# logstash_forwarder_files:
+#   - paths:
+#       - /var/log/secure
+#     fields:
+#       type: syslog
+#   - paths:
+#       - /var/log/nginx/access.log
+#     fields:
+#       type: nginx
