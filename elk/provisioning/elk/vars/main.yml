@@ -7,8 +7,6 @@ nginx_worker_connections: 1024
 nginx_remove_default_vhost: true
 
 logstash_monitor_local_syslog: false
-logstash_ssl_key_file: elk-vagrant-example.key
-logstash_ssl_certificate_file: elk-vagrant-example.crt
 
 # logstash_forwarder_logstash_server: logs
 # logstash_forwarder_ssl_certificate_file: elk-vagrant-example.crt
