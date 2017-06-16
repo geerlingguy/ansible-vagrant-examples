@@ -28,6 +28,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     ansible.playbook = "provisioning/playbook.yml"
     ansible.inventory_path = "provisioning/inventory"
     ansible.sudo = true
+    ansible.galaxy_role_file = "requirements.yml"
   end
 
 end
