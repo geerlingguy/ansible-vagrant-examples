@@ -1,6 +1,6 @@
 # A simple MySQL container.
 FROM ansible/ubuntu14.04-ansible
-MAINTAINER Jeff Geerling <geerlingguy@mac.com>
+LABEL maintainer="Jeff Geerling"
 
 # Install required Ansible roles.
 RUN ansible-galaxy install geerlingguy.mysql

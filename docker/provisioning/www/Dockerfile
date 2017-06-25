@@ -1,6 +1,6 @@
 # A simple Flask app container.
 FROM ansible/ubuntu14.04-ansible
-MAINTAINER Jeff Geerling <geerlingguy@mac.com>
+LABEL maintainer="Jeff Geerling"
 
 # Install Flask app dependencies.
 RUN apt-get update
