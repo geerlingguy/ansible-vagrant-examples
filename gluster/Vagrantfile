@@ -30,6 +30,7 @@ Vagrant.configure("2") do |config|
           ansible.playbook = "playbooks/provision.yml"
           ansible.inventory_path = "inventory"
           ansible.limit = "all"
+          ansible.galaxy_role_file = "requirements.yml"
         end
       end
     end

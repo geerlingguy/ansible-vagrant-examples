@@ -23,6 +23,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       ansible.playbook = "provisioning/elk/playbook.yml"
       ansible.inventory_path = "provisioning/elk/inventory"
       ansible.sudo = true
+      ansible.galaxy_role_file = "requirements.yml"
     end
   end
 
@@ -35,6 +36,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       ansible.playbook = "provisioning/web/playbook.yml"
       ansible.inventory_path = "provisioning/web/inventory"
       ansible.sudo = true
+      ansible.galaxy_role_file = "requirements.yml"
     end
   end
 
