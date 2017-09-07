@@ -44,10 +44,6 @@
       command: "ansible-playbook -i inventory install.yml"
       args:
         chdir: "{{ awx_installation_directory }}/installer"
-
-    - name: Install AWX using a shell script.
-      script: files/install-awx-centos7.sh
-      args:
         creates: /etc/awx_playbook_complete
 
     - name: Create a file to mark whether this playbook has completed.
