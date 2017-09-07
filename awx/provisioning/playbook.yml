@@ -1,0 +1,13 @@
+---
+# Ansible playbook for an AWX server.
+#
+# @author Jeff Geerling (2017).
+
+- hosts: awx
+  gather_facts: yes
+
+  tasks:
+    - name: Install AWX using a shell script.
+      script: files/install-awx-centos7.sh
+      args:
+        creates: /path/to/file/created
