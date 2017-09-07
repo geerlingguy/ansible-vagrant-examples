@@ -9,6 +9,7 @@
 
   vars:
     awx_installation_directory: "~/awx/"
+    awx_version: "devel"
     nodejs_version: "6.x"
     pip_install_packages:
       - name: docker-py
@@ -36,7 +37,7 @@
       git:
         repo: 'https://github.com/ansible/awx.git'
         dest: "{{ awx_installation_directory }}"
-        version: master
+        version: "{{ awx_version }}"
         accept_hostkey: yes
 
     - name: Run the AWX installation playbook.
