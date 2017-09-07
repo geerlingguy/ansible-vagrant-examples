@@ -8,21 +8,10 @@
   become: yes
 
   vars:
-    awx_installation_directory: "~/awx"
     awx_version: "devel"
     nodejs_version: "6.x"
     pip_install_packages:
       - name: docker-py
-
-  pre_tasks:
-    - name: Install dependencies.
-      yum:
-        name: "{{ item }}"
-        state: present
-      with_items:
-        - gettext
-        - gcc-c++
-        - bzip2
 
   roles:
     - geerlingguy.repo-epel
@@ -31,23 +20,4 @@
     - geerlingguy.docker
     - geerlingguy.pip
     - geerlingguy.nodejs
-
-  tasks:
-    - name: Ensure AWX repository is cloned.
-      git:
-        repo: 'https://github.com/ansible/awx.git'
-        dest: "{{ awx_installation_directory }}/"
-        version: "{{ awx_version }}"
-        accept_hostkey: yes
-
-    - name: Run the AWX installation playbook.
-      command: "ansible-playbook -i inventory install.yml"
-      args:
-        chdir: "{{ awx_installation_directory }}/installer"
-        creates: /etc/awx_playbook_complete
-
-    - name: Create a file to mark whether this playbook has completed.
-      file:
-        path: /etc/awx_playbook_complete
-        state: touch
-      changed_when: False
+    - geerlingguy.awx
