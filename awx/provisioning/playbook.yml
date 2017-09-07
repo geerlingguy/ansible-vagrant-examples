@@ -8,7 +8,7 @@
   become: yes
 
   vars:
-    awx_installation_directory: "~/awx/"
+    awx_installation_directory: "~/awx"
     awx_version: "devel"
     nodejs_version: "6.x"
     pip_install_packages:
@@ -36,14 +36,14 @@
     - name: Ensure AWX repository is cloned.
       git:
         repo: 'https://github.com/ansible/awx.git'
-        dest: "{{ awx_installation_directory }}"
+        dest: "{{ awx_installation_directory }}/"
         version: "{{ awx_version }}"
         accept_hostkey: yes
 
     - name: Run the AWX installation playbook.
-      command: ansible-playbook -i inventory install.yml
+      command: "ansible-playbook -i inventory install.yml"
       args:
-        chdir: "{{ awx_installation_directory }}"
+        chdir: "{{ awx_installation_directory }}/installer"
 
     - name: Install AWX using a shell script.
       script: files/install-awx-centos7.sh
