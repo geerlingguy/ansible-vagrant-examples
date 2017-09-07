@@ -19,7 +19,7 @@ To use the vagrant file, you will need to have done the following:
   2. Download and Install [Vagrant](https://www.vagrantup.com/downloads.html)
   3. Install [Ansible](http://ansibleworks.com/) ([guide for installing Ansible](http://docs.ansible.com/intro_installation.html))
   4. Open a shell prompt (Terminal app on a Mac) and cd into the folder containing the `Vagrantfile`
-  5. 5. Run the following command to install the necessary Ansible roles for this profile: `$ ansible-galaxy install -r requirements.yml`
+  5. Run the following command to install the necessary Ansible roles for this profile: `$ ansible-galaxy install -r requirements.yml`
 
 Once all of that is done, you can simply type in `vagrant up`, and Vagrant will create both new VMs and configure them.
 
@@ -40,4 +40,4 @@ If you'd like additional assistance editing your hosts file, please read [How do
 
 ## Author Information
 
-Created in 2014 by [Jeff Geerling](http://jeffgeerling.com/), author of [Ansible for DevOps](http://ansiblefordevops.com/).
+Created in 2014 by [Jeff Geerling](http://jeffgeerling.com/), author of [Ansible for DevOps](https://www.ansiblefordevops.com/).

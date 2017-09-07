@@ -6,7 +6,7 @@ You can `cd` into any of the included directories and run `vagrant up`, and a ge
 
 All of these examples use a combination of [roles I've added to Ansible Galaxy](https://servercheck.in/blog/using-ansible-galaxy), and were created to help demonstrate Ansible's simplicity and flexibility.
 
-Read more about Ansible and how I use it to manage infrastructure in [Ansible for DevOps](http://ansiblefordevops.com/), a book I've written.
+Read more about Ansible and how I use it to manage infrastructure in [Ansible for DevOps](https://www.ansiblefordevops.com/), a book I've written.
 
 # VMs/Apps Currently Present
 
@@ -34,5 +34,5 @@ MIT license.
 
 ## Author Information
 
-Created in 2014 by [Jeff Geerling](http://jeffgeerling.com/), author of [Ansible for DevOps](http://ansiblefordevops.com/).
+Created in 2014 by [Jeff Geerling](http://jeffgeerling.com/), author of [Ansible for DevOps](https://www.ansiblefordevops.com/).
 
