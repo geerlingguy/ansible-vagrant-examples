@@ -25,11 +25,11 @@ git clone https://github.com/ansible/awx.git
 #git clone https://github.com/ansible/awx-logos.git
 
 #change anything in the inventory that needs to be changed
-nano awx/installer/inventory
+# nano awx/installer/inventory
 
 #start build. will take a while
-cd installer
+cd awx/installer
 ansible-playbook -i inventory install.yml
 
 #confirm containers are running. should be 5
-docker ps
+# docker ps
