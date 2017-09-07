@@ -4,7 +4,7 @@
 
 Vagrant and VirtualBox (or some other VM provider) can be used to quickly build or rebuild virtual servers.
 
-TODO: Description.
+This example installs Ansible's [AWX Project](https://github.com/ansible/awx) (the source code behind [Ansible Tower](https://www.ansible.com/tower)) on a CentOS 7 VM, so you can test and run AWX... to test and run more Ansible playbooks!
 
 ## Getting Started
 
@@ -30,7 +30,10 @@ You need to modify your host machine's hosts file (Mac/Linux: `/etc/hosts`; Wind
 
 (Where `awx.local` is the hostname you have configured in the `Vagrantfile`).
 
-After that is configured, you could visit http://awx.local/ in a browser, and you'll see the AWX login page.
+After that is configured, you could visit http://awx.local/ in a browser, and you'll see the AWX login page. Log in with the default credentials:
+
+  - Username: `admin`
+  - Password: `password`
 
 If you'd like additional assistance editing your hosts file, please read [How do I modify my hosts file?](http://www.rackspace.com/knowledge_center/article/how-do-i-modify-my-hosts-file) from Rackspace.
 
