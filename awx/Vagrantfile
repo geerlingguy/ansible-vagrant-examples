@@ -15,14 +15,14 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
 
   # AWX VM.
-  config.vm.define "awx" do |logs|
-    logs.vm.hostname = "awx.local"
-    logs.vm.network :private_network, ip: "192.168.6.65"
+  config.vm.define "awx" do |awx|
+    awx.vm.hostname = "awx.local"
+    awx.vm.network :private_network, ip: "192.168.6.65"
 
-    logs.vm.provision :ansible do |ansible|
+    awx.vm.provision :ansible do |ansible|
       ansible.playbook = "provisioning/playbook.yml"
       ansible.inventory_path = "provisioning/inventory"
-      ansible.sudo = true
+      ansible.become = true
     end
   end
 
