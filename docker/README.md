@@ -30,9 +30,9 @@ Once the new VM is up and running (after `vagrant up` is complete and you're bac
 
 You need to modify your host machine's hosts file (Mac/Linux: `/etc/hosts`; Windows: `%systemroot%\system32\drivers\etc\hosts`), adding the line below:
 
-    192.168.33.39  docker.dev
+    192.168.33.39  docker.test
 
-After that is configured, you could visit http://docker.dev/ in a browser, and you'll see the test page, confirming the Flask container can communicate with the MySQL container.
+After that is configured, you could visit http://docker.test/ in a browser, and you'll see the test page, confirming the Flask container can communicate with the MySQL container.
 
 If you'd like additional assistance editing your hosts file, please read [How do I modify my hosts file?](http://www.rackspace.com/knowledge_center/article/how-do-i-modify-my-hosts-file) from Rackspace.
 

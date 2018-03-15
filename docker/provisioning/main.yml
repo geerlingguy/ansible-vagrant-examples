@@ -10,5 +10,5 @@
     - role: angstwad.docker_ubuntu
 
   tasks:
-    - include: setup.yml
-    - include: docker.yml
+    - import_tasks: setup.yml
+    - import_tasks: docker.yml

@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 # Configure MySQL connection.
 db = SQLAlchemy()
-db_uri = 'mysql://admin:admin@{{ host_ip_address }}/information_schema'
+db_uri = 'mysql://flask:flask@{{ host_ip_address }}/flask'
 app.config['SQLALCHEMY_DATABASE_URI'] = db_uri
 db.init_app(app)
 
