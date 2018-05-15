@@ -1,0 +1,28 @@
+---
+- hosts: kubernetes
+  gather_facts: yes
+  become: yes
+
+  vars:
+    swapfile_path: /swap
+
+  pre_tasks:
+    - name: Update apt cache.
+      apt: update_cache=yes cache_valid_time=3600
+      when: ansible_os_family == 'Debian'
+
+    - name: Ensure swap is disabled.
+      mount:
+        path: "{{ swapfile_path }}"
+        fstype: swap
+        state: absent
+
+    - name: Disable swap.
+      command: swapoff -a
+      when: ansible_swaptotal_mb > 0
+
+  roles:
+    - geerlingguy.docker
+    - geerlingguy.kubernetes
+
+  tasks: []
