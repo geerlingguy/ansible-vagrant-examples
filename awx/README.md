@@ -22,6 +22,8 @@ Once all of that is done, you can simply type in `vagrant up`, and Vagrant will 
 
 Once the VM is up and running (after `vagrant up` is complete and you're back at the command prompt), you can log into it via SSH if you'd like by typing in `vagrant ssh`. Otherwise, the next steps are below.
 
+> Note: This VM uses 4 GB of RAM by default, because AWX requires a lot of memory to perform well. If you are using a server or local workstation with less than 8 GB of RAM, you might want to manually change the memory requirements to a lower value (the `v.memory` parameter in the `Vagrantfile`).
+
 ### Setting up your hosts file
 
 You need to modify your host machine's hosts file (Mac/Linux: `/etc/hosts`; Windows: `%systemroot%\system32\drivers\etc\hosts`), adding the lines below:
