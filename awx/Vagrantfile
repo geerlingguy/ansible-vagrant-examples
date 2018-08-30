@@ -20,6 +20,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     awx.vm.network :private_network, ip: "192.168.6.65"
 
     awx.vm.provision :ansible do |ansible|
+      ansible.compatibility_mode = "2.0"
       ansible.playbook = "provisioning/playbook.yml"
       ansible.inventory_path = "provisioning/inventory"
       ansible.become = true
