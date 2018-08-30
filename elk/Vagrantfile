@@ -32,6 +32,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     webs.vm.network :private_network, ip: "192.168.9.91"
 
     webs.vm.provision :ansible do |ansible|
+      ansible.compatibility_mode = "2.0"
       ansible.playbook = "provisioning/web/playbook.yml"
       ansible.inventory_path = "provisioning/web/inventory"
       ansible.become = true
