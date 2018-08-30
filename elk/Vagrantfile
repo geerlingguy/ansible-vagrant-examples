@@ -34,7 +34,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     webs.vm.provision :ansible do |ansible|
       ansible.playbook = "provisioning/web/playbook.yml"
       ansible.inventory_path = "provisioning/web/inventory"
-      ansible.sudo = true
+      ansible.become = true
     end
   end
 
