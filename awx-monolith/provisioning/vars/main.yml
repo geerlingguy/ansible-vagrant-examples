@@ -1,0 +1,8 @@
+---
+awx_version: "devel"
+awx_run_install_playbook: no
+
+nodejs_version: "6.x"
+
+pip_install_packages:
+  - name: docker-py

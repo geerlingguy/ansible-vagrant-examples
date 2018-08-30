@@ -1,0 +1,10 @@
+---
+- src: geerlingguy.repo-epel
+- src: geerlingguy.git
+- src: geerlingguy.ansible
+- src: geerlingguy.pip
+- src: geerlingguy.nodejs
+- src: geerlingguy.postgresql
+- src: geerlingguy.memcached
+- src: geerlingguy.rabbitmq
+- src: geerlingguy.awx
