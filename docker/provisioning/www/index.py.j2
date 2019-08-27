@@ -2,21 +2,23 @@
 from flask import Flask
 from flask import Markup
 from flask import render_template
-from flask.ext.sqlalchemy import SQLAlchemy
+from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy import text
 
 app = Flask(__name__)
 
 # Configure MySQL connection.
-db = SQLAlchemy()
 db_uri = 'mysql://flask:flask@{{ host_ip_address }}/flask'
 app.config['SQLALCHEMY_DATABASE_URI'] = db_uri
-db.init_app(app)
+db = SQLAlchemy(app)
 
 @app.route("/")
 def test():
     mysql_result = False
     try:
-        if db.session.query("1").from_statement("SELECT 1").all():
+        query = text('SELECT 1')
+        result = db.engine.execute(query)
+        if [row[0] for row in result][0] == 1:
             mysql_result = True
     except:
         pass

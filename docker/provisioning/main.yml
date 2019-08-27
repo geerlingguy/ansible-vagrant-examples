@@ -1,13 +1,13 @@
 ---
 - hosts: all
-  become: yes
+  become: true
 
   pre_tasks:
     - name: Update apt cache if needed.
       apt: update_cache=yes cache_valid_time=3600
 
   roles:
-    - role: angstwad.docker_ubuntu
+    - role: geerlingguy.docker
 
   tasks:
     - import_tasks: setup.yml

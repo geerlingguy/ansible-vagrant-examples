@@ -2,13 +2,15 @@
 
 ## Background
 
-[Docker](https://www.docker.com/) is used to build and manage linux containers. [Ansible](http://www.ansible.com/) is useful in managing the Docker lifecycle.
+[Docker](https://www.docker.com/) is used to build and manage linux containers. [Ansible](http://www.ansible.com/) is useful in managing the Docker container lifecycle.
 
 This Vagrant profile uses Ansible to configure a local VM with Docker, then it uses Ansible to build and run three containers for a simple Flask + MySQL web app stack, Docker-style:
 
   - `www`: Flask app on an Ubuntu container.
   - `db`: MySQL database on an Ubuntu container.
   - `data`: MySQL data volume on a Busybox container (for persistence).
+
+> Note: These examples are intended to highlight how Ansible intracts with the Docker container lifecycle. There are a number of other ways to manage container builds and orchestration, like Docker Compose, Kubernetes, etc. This example is not intended to necessarily be the 'best practice' for every situation.
 
 ## Getting Started
 

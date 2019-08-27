@@ -1,10 +1,10 @@
 ---
 - hosts: localhost
-  become: yes
+  become: true
 
   tasks:
     - name: Get host IP address.
-      shell: "/sbin/ip route|awk '/default/ { print $3 }'"
+      shell: "/sbin/ip route | awk '/default/ { print $3 }'"
       register: host_ip
       changed_when: false
 

@@ -1,10 +1,11 @@
 # A simple Flask app container.
-FROM geerlingguy/docker-ubuntu1604-ansible
+FROM geerlingguy/docker-ubuntu1804-ansible
 MAINTAINER Jeff Geerling <geerlingguy@mac.com>
 
 # Install Flask app dependencies.
 RUN apt-get update
-RUN apt-get install -y libmysqlclient-dev python-dev python-pip
+RUN apt-get install -y libmysqlclient-dev build-essential \
+  python-dev python-pip
 RUN pip install flask flask-sqlalchemy mysql-python
 
 # Install playbook and run it.
