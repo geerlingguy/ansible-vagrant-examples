@@ -13,7 +13,7 @@ Read more about Ansible and how I use it to manage infrastructure in [Ansible fo
   - **AWX** (`awx` - Ansible AWX (CI/CD system for running Ansible playbooks)
   - **Docker** (`docker` - Docker container building and management (builds a simple LAMP stack).
   - **Drupal** (`drupal` - LAMP/LEMP-based Content Management System)
-  - **ELK** (`elk` - Log monitoring (Elasticsearch, Logstash, Kibana) and forwarding (Logstash forwarder))
+  - **ELK** (`elk` - This example has been moved to the [Ansible for DevOps repository](https://github.com/geerlingguy/ansible-for-devops))
   - **GitLab** (`gitlab` - Ruby-based GitHub-like Git web interface)
   - **GlusterFS** (`gluster` - A robust distributed filesystem)
   - **Gogs** (`gogs` - Go-based GitHub-like Git web interface)
