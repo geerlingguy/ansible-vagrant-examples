@@ -7,7 +7,7 @@ Vagrant and VirtualBox (or some other VM provider) can be used to quickly build 
 This Vagrant profile configures two servers:
 
   1. A server with the ELK stack ([Elasticsearch](http://www.elasticsearch.org/), [Logstash](http://logstash.net/), and [Kibana](http://www.elasticsearch.org/overview/kibana/)) using the [Ansible](http://www.ansible.com/) provisioner.
-  2. A server with the Nginx and [Logstash Forwarder](https://github.com/elasticsearch/logstash-forwarder) using the [Ansible](http://www.ansible.com/) provisioner, which routes Nginx access logs to the first server.
+  2. A server with the Nginx and [Filebeat](https://www.elastic.co/products/beats/filebeat) using the [Ansible](http://www.ansible.com/) provisioner, which routes Nginx access logs to the first server.
 
 ## Getting Started
 
@@ -29,12 +29,12 @@ Once the VMs are up and running (after `vagrant up` is complete and you're back 
 
 You need to modify your host machine's hosts file (Mac/Linux: `/etc/hosts`; Windows: `%systemroot%\system32\drivers\etc\hosts`), adding the lines below:
 
-    192.168.9.90  logs
-    192.168.9.91  webs
+    192.168.9.90  logs.test
+    192.168.9.91  webs.test
 
-(Where `logs`/`webs` is the hostname you have configured in the `Vagrantfile`).
+(Where `logs.test`/`webs.test` is the hostname you have configured in the `Vagrantfile`).
 
-After that is configured, you could visit http://logs/ in a browser, and you'll see the Kibana dashboard, and you can visit http://webs/, and you'll see Nginx's default index page.
+After that is configured, you could visit http://logs.test/ in a browser, and you'll see the Kibana dashboard, and you can visit http://webs.test/, and you'll see Nginx's default index page.
 
 If you'd like additional assistance editing your hosts file, please read [How do I modify my hosts file?](http://www.rackspace.com/knowledge_center/article/how-do-i-modify-my-hosts-file) from Rackspace.
 

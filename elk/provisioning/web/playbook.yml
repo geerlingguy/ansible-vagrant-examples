@@ -15,7 +15,7 @@
 
   roles:
     - geerlingguy.nginx
-    - geerlingguy.logstash-forwarder
+    - geerlingguy.filebeat
 
   tasks:
     - name: Set up virtual host for testing.
@@ -30,6 +30,6 @@
     - name: Ensure logs server is in hosts file.
       lineinfile:
         dest: /etc/hosts
-        regexp: '.*logs$'
-        line: "192.168.9.90 logs"
+        regexp: '.*logs\.test$'
+        line: "192.168.9.90 logs.test"
         state: present

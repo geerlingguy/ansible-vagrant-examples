@@ -4,11 +4,11 @@
 VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-  config.vm.box = "geerlingguy/ubuntu1604"
+  config.vm.box = "geerlingguy/ubuntu1804"
   config.ssh.insert_key = false
 
   config.vm.provider :virtualbox do |v|
-    v.memory = 1024
+    v.memory = 2048
     v.cpus = 2
     v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
     v.customize ["modifyvm", :id, "--ioapic", "on"]
@@ -16,7 +16,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # ELK server.
   config.vm.define "logs" do |logs|
-    logs.vm.hostname = "logs"
+    logs.vm.hostname = "logs.test"
     logs.vm.network :private_network, ip: "192.168.9.90"
 
     logs.vm.provision :ansible do |ansible|
@@ -28,7 +28,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # Web server.
   config.vm.define "webs" do |webs|
-    webs.vm.hostname = "webs"
+    webs.vm.hostname = "webs.test"
     webs.vm.network :private_network, ip: "192.168.9.91"
 
     webs.vm.provision :ansible do |ansible|

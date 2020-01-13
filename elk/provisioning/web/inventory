@@ -1,1 +1,2 @@
-webs ansible_ssh_host=192.168.9.91 ansible_ssh_port=22
+[webs]
+webs.test ansible_ssh_host=192.168.9.91 ansible_ssh_port=22
