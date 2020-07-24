@@ -15,7 +15,6 @@ Read more about Ansible and how I use it to manage infrastructure in [Ansible fo
   - **Drupal** (`drupal` - LAMP/LEMP-based Content Management System)
   - **ELK** (`elk` - This example has been moved to the [Ansible for DevOps repository](https://github.com/geerlingguy/ansible-for-devops))
   - **GitLab** (`gitlab` - Ruby-based GitHub-like Git web interface)
-  - **GlusterFS** (`gluster` - A robust distributed filesystem)
   - **Gogs** (`gogs` - Go-based GitHub-like Git web interface)
   - **Jenkins** (`jenkins` - Java-based Continuous Integration server)
   - **LAMP** (`lamp` - Linux, Apache, MySQL, and PHP)
