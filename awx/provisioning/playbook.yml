@@ -10,6 +10,7 @@
   vars:
     awx_version: "devel"
     nodejs_version: "6.x"
+    docker_install_compose: false
     pip_install_packages:
       - name: docker
       - name: docker-compose
