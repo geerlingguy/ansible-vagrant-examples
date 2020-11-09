@@ -10,6 +10,7 @@
   vars:
     awx_version: "devel"
     nodejs_version: "6.x"
+    docker_compose_version: "1.27.4"
     pip_install_packages:
       - name: docker
     docker_users:
