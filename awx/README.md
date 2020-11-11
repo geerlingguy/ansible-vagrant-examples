@@ -4,7 +4,7 @@
 
 Vagrant and VirtualBox (or some other VM provider) can be used to quickly build or rebuild virtual servers.
 
-This example installs Ansible's [AWX Project](https://github.com/ansible/awx) (the source code behind [Ansible Tower](https://www.ansible.com/tower)) on a CentOS 7 VM, so you can test and run AWX... to test and run more Ansible playbooks!
+This example installs Ansible's [AWX Project](https://github.com/ansible/awx) (the upstream open source project behind [Ansible Tower](https://www.ansible.com/tower)) on an Ubuntu VM, so you can test and run AWX... to test and run more Ansible playbooks!
 
 ## Getting Started
 
@@ -22,7 +22,7 @@ Once all of that is done, you can simply type in `vagrant up`, and Vagrant will 
 
 Once the VM is up and running (after `vagrant up` is complete and you're back at the command prompt), you can log into it via SSH if you'd like by typing in `vagrant ssh`. Otherwise, the next steps are below.
 
-> Note: This VM uses 4 GB of RAM by default, because AWX requires a lot of memory to perform well. If you are using a server or local workstation with less than 8 GB of RAM, you might want to manually change the memory requirements to a lower value (the `v.memory` parameter in the `Vagrantfile`).
+> Note: This VM uses 4 GB of RAM by default, because AWX requires a lot of memory to perform well. If you are using a server or local workstation with less than 8 GB of RAM, AWX may not run very well!
 
 ### Setting up your hosts file
 

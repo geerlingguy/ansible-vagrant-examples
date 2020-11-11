@@ -1,7 +1,7 @@
 ---
 # Ansible playbook for an AWX server.
 #
-# @author Jeff Geerling (2017).
+# @author Jeff Geerling.
 
 - hosts: awx
   gather_facts: yes
@@ -9,19 +9,19 @@
 
   vars:
     awx_version: "devel"
-    nodejs_version: "6.x"
+    nodejs_version: "10.x"
+    ansible_install_method: "pip"
     docker_install_compose: false
+    docker_users:
+      - vagrant
     pip_install_packages:
       - name: docker
       - name: docker-compose
-    docker_users:
-      - vagrant
 
   roles:
-    - geerlingguy.repo-epel
     - geerlingguy.git
+    - geerlingguy.pip
     - geerlingguy.ansible
     - geerlingguy.docker
-    - geerlingguy.pip
     - geerlingguy.nodejs
     - geerlingguy.awx
