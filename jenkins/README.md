@@ -32,7 +32,7 @@ You need to modify your host machine's hosts file (Mac/Linux: `/etc/hosts`; Wind
 
 After that is configured, you could visit http://jenkins:8080/ in a browser, and you'll see the Jenkins home page.
 
-If you'd like additional assistance editing your hosts file, please read [How do I modify my hosts file?](http://www.rackspace.com/knowledge_center/article/how-do-i-modify-my-hosts-file) from Rackspace.
+If you'd like additional assistance editing your hosts file, please read [How do I modify my hosts file?](https://docs.rackspace.com/support/how-to/modify-your-hosts-file) from Rackspace.
 
 ## Author Information
 

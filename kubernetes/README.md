@@ -30,7 +30,7 @@ You need to modify your host machine's hosts file (Mac/Linux: `/etc/hosts`; Wind
 
 (Where `kube1` is the hostname you have configured in the `Vagrantfile` for the first machine, which will be the Kubernetes master).
 
-If you'd like additional assistance editing your hosts file, please read [How do I modify my hosts file?](http://www.rackspace.com/knowledge_center/article/how-do-i-modify-my-hosts-file) from Rackspace.
+If you'd like additional assistance editing your hosts file, please read [How do I modify my hosts file?](https://docs.rackspace.com/support/how-to/modify-your-hosts-file) from Rackspace.
 
 ### Using Kubernetes
 

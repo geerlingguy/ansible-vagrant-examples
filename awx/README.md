@@ -39,7 +39,7 @@ After that is configured, you could visit http://awx.local/ in a browser, and yo
 
 > Note: The first time you install AWX, it takes some time to set up AWX's database (and this process will peg one CPU core for a while!). If you get a 500 error notice when you visit awx.local, wait a little bit and try again.
 
-If you'd like additional assistance editing your hosts file, please read [How do I modify my hosts file?](http://www.rackspace.com/knowledge_center/article/how-do-i-modify-my-hosts-file) from Rackspace.
+If you'd like additional assistance editing your hosts file, please read [How do I modify my hosts file?](https://docs.rackspace.com/support/how-to/modify-your-hosts-file) from Rackspace.
 
 ## Author Information
 
