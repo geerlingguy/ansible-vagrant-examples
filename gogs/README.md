@@ -12,11 +12,11 @@ This README file is inside a folder that contains a `Vagrantfile` (hereafter thi
 
 To use the vagrant file, you will need to have done the following:
 
-  1. Download and Install [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
-  2. Download and Install [Vagrant](https://www.vagrantup.com/downloads.html)
-  3. Install [Ansible](https://www.ansible.com/) ([guide for installing Ansible](http://docs.ansible.com/ansible/latest/intro_installation.html))
-  4. Open a shell prompt (Terminal app on a Mac) and cd into the folder containing the `Vagrantfile`
-  5. Run the following command to install the necessary Ansible roles for this profile: `$ ansible-galaxy install -r requirements.yml`
+1. Download and Install [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
+2. Download and Install [Vagrant](https://www.vagrantup.com/downloads.html)
+3. Install [Ansible](https://www.ansible.com/) ([guide for installing Ansible](http://docs.ansible.com/ansible/latest/intro_installation.html))
+4. Open a shell prompt (Terminal app on a Mac) and cd into the folder containing the `Vagrantfile`
+5. Run the following command to install the necessary Ansible roles for this profile: `$ ansible-galaxy install -r requirements.yml`
 
 Once all of that is done, you can simply type in `vagrant up`, and Vagrant will create a new VM, install the base box, and configure it.
 
@@ -32,7 +32,7 @@ You need to modify your host machine's hosts file (Mac/Linux: `/etc/hosts`; Wind
 
 After that is configured, you could visit `http://gogs:3000/install` in a browser, and you'll see the Gogs installation page. The MySQL root user account's password (configured in `provisioning/vars/main.yml`) is `root`.
 
-If you'd like additional assistance editing your hosts file, please read [How do I modify my hosts file?](http://www.rackspace.com/knowledge_center/article/how-do-i-modify-my-hosts-file) from Rackspace.
+If you'd like additional assistance editing your hosts file, please read [How do I modify my hosts file?](https://docs.rackspace.com/support/how-to/modify-your-hosts-file) from Rackspace.
 
 ## Author Information
 
