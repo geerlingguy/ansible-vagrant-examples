@@ -14,9 +14,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # Define three VMs with static private IP addresses.
   boxes = [
-    { :name => "kube1", :ip => "192.168.33.71" },
-    { :name => "kube2", :ip => "192.168.33.72" },
-    { :name => "kube3", :ip => "192.168.33.73" }
+    { :name => "kube1", :ip => "192.168.56.71" },
+    { :name => "kube2", :ip => "192.168.56.72" },
+    { :name => "kube3", :ip => "192.168.56.73" }
   ]
 
   # Provision each of the VMs.
@@ -38,7 +38,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
             "kubernetes_master:vars" => {
               kubernetes_role: "master",
               swapfile_path: "/dev/mapper/vagrant--vg-swap_1",
-              kubernetes_apiserver_advertise_address: "192.168.33.71"
+              kubernetes_apiserver_advertise_address: "192.168.56.71"
             },
             "kubernetes_node" => ["kube2", "kube3"],
             "kubernetes_node:vars" => {

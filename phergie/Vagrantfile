@@ -16,7 +16,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
 
   config.vm.hostname = "phergie"
-  config.vm.network :private_network, ip: "192.168.33.99"
+  config.vm.network :private_network, ip: "192.168.56.99"
 
   # Set the name of the VM. See: http://stackoverflow.com/a/17864388/100134
   config.vm.define :phergie do |phergie|

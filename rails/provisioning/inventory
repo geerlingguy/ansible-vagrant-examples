@@ -1,1 +1,1 @@
-rails ansible_ssh_host=192.168.33.8 ansible_ssh_port=22
+rails ansible_ssh_host=192.168.56.8 ansible_ssh_port=22

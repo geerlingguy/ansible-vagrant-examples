@@ -26,7 +26,7 @@ Once the new VM is up and running (after `vagrant up` is complete and you're bac
 
 You need to modify your host machine's hosts file (Mac/Linux: `/etc/hosts`; Windows: `%systemroot%\system32\drivers\etc\hosts`), adding the line below:
 
-    192.168.33.44  solr
+    192.168.56.44  solr
 
 (Where `solr`) is the hostname you have configured in the `Vagrantfile`).
 

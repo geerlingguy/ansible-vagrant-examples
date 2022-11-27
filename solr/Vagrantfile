@@ -16,7 +16,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
 
   config.vm.hostname = "solr"
-  config.vm.network :private_network, ip: "192.168.33.44"
+  config.vm.network :private_network, ip: "192.168.56.44"
 
   # Set the name of the VM. See: http://stackoverflow.com/a/17864388/100134
   config.vm.define :solr do |solr|
