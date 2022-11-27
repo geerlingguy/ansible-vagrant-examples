@@ -26,7 +26,7 @@ Once the new VM is up and running (after `vagrant up` is complete and you're bac
 
 You need to modify your host machine's hosts file (Mac/Linux: `/etc/hosts`; Windows: `%systemroot%\system32\drivers\etc\hosts`), adding the line below:
 
-    192.168.33.71  kube1
+    192.168.56.71  kube1
 
 (Where `kube1` is the hostname you have configured in the `Vagrantfile` for the first machine, which will be the Kubernetes master).
 
